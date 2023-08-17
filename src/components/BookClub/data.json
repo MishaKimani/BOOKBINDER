@@ -1,0 +1,28 @@
+[
+    {
+        "id": "1",
+        "Name": "Aria's BookClub",
+        "Book": "Current Book: The Girl With The Dragon Tattoo",
+        "Members": "Members: 333 readers",
+        "Image": "https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+
+    },
+
+    {
+        "id": "2",
+        "Name": "TBC Book Club",
+        "Book": "Current Book: GameChanger",
+        "Members": "Members: 450 readers",
+        "Image": "https://images.pexels.com/photos/355805/pexels-photo-355805.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+
+    },
+
+    {
+        "id": "3",
+        "Name": "Lang'ata W. Book Club",
+        "Book": "Current Book: The Seven Husbands of Evelyn Hugo",
+        "Members": "Members: 422 readers",
+        "Image": "https://images.pexels.com/photos/2846814/pexels-photo-2846814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+
+    }
+]

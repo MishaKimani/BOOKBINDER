@@ -1,0 +1,55 @@
+.clubpage{
+    background-color: rgb(215,219,219);
+
+    .banner{
+    
+        background-image: url(https://images.pexels.com/photos/6120398/pexels-photo-6120398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        object-fit: cover;
+        height: 150px;
+        color: rgb(174, 174, 235);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: xx-large;
+        font-style: italic;
+    }
+    
+    .heading{
+        margin: 20px;
+        font-size: x-large;
+        color: blue;
+    }
+    
+    .clubs{
+        margin: 5px;
+        
+        font-size: small;
+        font-weight: lighter;
+        display: flex;
+        height: 300px;
+        padding: 10px;
+        gap: 10px;
+
+        .bookimg{
+            width: 250px;
+            height: 250px;
+        }
+
+        .clubcont{
+
+            >*{margin-bottom: 20px;}
+
+            .buttjoin{
+                height: 30px;
+                width: 100px;
+                border-radius: 10px;
+                background-color: rgb(98, 98, 128);
+
+            
+            }
+        }
+
+        
+    }
+}
+

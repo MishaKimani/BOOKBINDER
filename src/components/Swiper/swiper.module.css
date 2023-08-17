@@ -1,0 +1,33 @@
+.carousel{
+    display: flex;
+
+    margin: 10px;
+
+    .cover{
+      margin-right: 5px;
+    }
+
+    .carousel2{
+
+        display: flex;
+        flex-direction: column;
+
+        >*{
+            margin-bottom: 15px;
+          }
+
+          .add{
+            width: 200px;
+          }
+
+          .get{
+            width: 200px;
+          }
+
+          .rating{
+            display: flex;
+            align-items: center;
+          }
+
+        }
+}
