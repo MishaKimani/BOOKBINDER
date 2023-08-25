@@ -1,12 +1,11 @@
-import styles from './landing.module.css'
+import styles from './home.module.css'
 import bourne from '../../assets/BourneBook.jpeg'
 import ransom from '../../assets/BloodRansom.jpeg'
 import Carousel from '../Swiper'
 
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
-import GradeIcon from '@mui/icons-material/Grade';
 
-const LandingPage=()=>{
+const Homes=()=>{
 
     return(
         <main className={styles.landing}>
@@ -102,4 +101,4 @@ const LandingPage=()=>{
     )
 }
 
-export default LandingPage
+export default Homes

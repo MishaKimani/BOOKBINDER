@@ -10,7 +10,6 @@ import logo from '../../assets/BOOKBINd.png'
 import MenuSimple from "./dropdown";
 
 
-
 const NavBar=()=>{
 
     return(
@@ -57,11 +56,11 @@ const NavBar=()=>{
             <div className={styles.acc}>
                 
                 <MenuSimple/>
+
                 
             </div>
 
-            
-
+        
             </div>
         </div>
         </nav>

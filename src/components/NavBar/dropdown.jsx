@@ -7,6 +7,10 @@ import { styled } from '@mui/system';
 
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 
+import {AuthContext} from "../../context/authContext"
+import { useContext } from "react"
+
+
 
 export default function MenuSimple() {
   const createHandleMenuClick = (menuItem) => {
@@ -14,6 +18,9 @@ export default function MenuSimple() {
       console.log(`Clicked on ${menuItem}`);
     };
   };
+
+  const {session , handleLogout}=useContext(AuthContext)
+
 
   return (
     <Dropdown>
@@ -45,7 +52,7 @@ export default function MenuSimple() {
         <StyledMenuItem onClick={createHandleMenuClick('Help')}>
           Help
         </StyledMenuItem>
-        <StyledMenuItem onClick={createHandleMenuClick('LogOut')}>
+        <StyledMenuItem onClick={handleLogout}>
           LogOut
         </StyledMenuItem>
 

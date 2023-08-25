@@ -1,13 +1,28 @@
 import NavBar from "../components/NavBar"
-import LandingPage from '../components/LandingPage'
+import Homes from '../components/Home'
+import Landing from "../components/Landing"
+
+import {AuthContext} from "../context/authContext"
+import { useContext } from "react"
+import { Link } from "react-router-dom"
 
 function Home() {
 
-  return (
-    <main className="body">
-      <NavBar/>
-      <LandingPage/>
-    </main>
+  const {session , handleLogout}=useContext(AuthContext)
+  return(
+
+      <main>
+
+        
+      
+          {
+              !session? <Landing/> : <main><NavBar/> <Homes/></main>
+               
+          }
+          
+      
+      </main>
+
   )
 }
 
