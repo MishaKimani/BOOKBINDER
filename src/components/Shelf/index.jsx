@@ -1,9 +1,9 @@
-import { useShelfContext } from "../context/shelfcontext"
+import { useShelfContext } from "../context/shelfContext"
 import styles from "../ExplorePage/explorepg.module.css"
 
 import { Link } from "react-router-dom"
 
-import { BiBookAdd, BiSolidBook } from "react-icons/bi";
+import { BiBookAdd} from "react-icons/bi";
 
 
 const ShelfPg=(()=>{

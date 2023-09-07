@@ -4,7 +4,7 @@ import data from "./data.json"
 
 import { Link } from "react-router-dom"
 
-import { useShelfContext } from "../context/shelfcontext"
+import { useShelfContext } from "../context/shelfContext"
            
 
 const ExplorePg=()=>{

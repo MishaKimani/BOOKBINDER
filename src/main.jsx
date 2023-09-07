@@ -14,7 +14,7 @@ import {
 } from "react-router-dom"
 
 import { AuthProvider } from './context/authContext'
-import ShelfContextProvider from './components/context/shelfcontext'
+import ShelfContextProvider from './components/context/shelfContext'
 
 const paths = createBrowserRouter([
   {
