@@ -10,7 +10,7 @@ import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import {AuthContext} from "../../context/authContext"
 import { useContext } from "react"
 
-
+import { Link } from 'react-router-dom';
 
 export default function MenuSimple() {
   const createHandleMenuClick = (menuItem) => {
@@ -35,7 +35,9 @@ export default function MenuSimple() {
       <Menu slots={{ listbox: StyledListbox }}>
 
         <StyledMenuItem onClick={createHandleMenuClick('Profile')}>
+          <Link to="/Profile">
           Profile
+          </Link>
         </StyledMenuItem>
 
         {/* <StyledMenuItem onClick={createHandleMenuClick('Reading Challenge')}>

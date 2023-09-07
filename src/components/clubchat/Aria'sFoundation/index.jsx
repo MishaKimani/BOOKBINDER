@@ -11,11 +11,11 @@ const Aria=(()=>{
 
     async function init() {
 
-        const { data: Aria, error } = await supabase
-        .from('Aria')
+        const { data: messages, error } = await supabase
+        .from('messages')
         .select('*');
 
-        console.log(Aria);
+        console.log(messages);
     }
 
     init()
