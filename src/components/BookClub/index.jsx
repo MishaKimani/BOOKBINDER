@@ -1,6 +1,6 @@
 import styles from "./bookclub.module.css"
 import data from "./data.json"
-import Footer from '../Footer';
+import Footer from '../footer';
 import NavBar from '../NavBar';
 
 
