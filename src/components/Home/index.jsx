@@ -8,7 +8,7 @@ import twisted from "../../assets/twistedgames.jpeg"
 import bookstack from "../../assets/bookstack.jpg"
 import divergent from "../../assets/Divergent.jpeg"
 
-import Footer from '../Footer';
+import Footer from '../footer';
 
 import { FaCircleRight } from "react-icons/fa6";
 
