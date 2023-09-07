@@ -1,55 +1,96 @@
 .clubpage{
-    background-color: rgb(215,219,219);
+    background-color: aliceblue;
 
-    .banner{
+    /* .banner{
     
-        background-image: url(https://images.pexels.com/photos/6120398/pexels-photo-6120398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-        object-fit: cover;
-        height: 150px;
-        color: rgb(174, 174, 235);
+        border-radius: 50px;
+        background-color: rgb(102,99,236);
+
+        width: 30%;
+        height: 70px;
         display: flex;
-        align-items: center;
         justify-content: center;
-        font-size: xx-large;
-        font-style: italic;
-    }
+        align-items: center;
+
+        margin-top: 20px;
+
+    } */
     
-    .heading{
-        margin: 20px;
-        font-size: x-large;
-        color: blue;
-    }
-    
-    .clubs{
-        margin: 5px;
-        
-        font-size: small;
-        font-weight: lighter;
-        display: flex;
-        height: 300px;
-        padding: 10px;
-        gap: 10px;
-
-        .bookimg{
-            width: 250px;
-            height: 250px;
-        }
-
-        .clubcont{
-
-            >*{margin-bottom: 20px;}
-
-            .buttjoin{
-                height: 30px;
-                width: 100px;
-                border-radius: 10px;
-                background-color: rgb(98, 98, 128);
-
-            
-            }
-        }
-
-        
-    }
 }
 
+.club{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    background-color: aliceblue;
+    font-size: 15px;
+   
+    padding: 50px;
+}
+
+.clubs{
+
+   width: 300px;
+    height: 350px;
+    /* display: flex; */
+    border: 1px solid grey;
+
+}
+
+.bookimg{
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+}
+
+.clubcont{
+
+    color: black;
+    font-size: smaller;
+    
+    padding-left: 20px;
+
+}
+
+.names{
+
+    color: black;
+    font-size: medium;
+}
+
+.join{
+
+        width: 100px;
+        margin: 5px;
+
+        border: none;
+        border-radius: 3px;
+        background-color: rgb(215,219,219);
+
+    
+}
+
+/* button:hover{
+
+    width: 90px;
+    height: 40px;
+} */
+
+.arrow{
+
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin: 90px;
+
+    >*{
+        
+    width: 50px;
+    height: 50px;
+    color: rgb(102,99,236);
+
+    }
+}

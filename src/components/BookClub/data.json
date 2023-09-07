@@ -1,9 +1,9 @@
 [
     {
         "id": "1",
-        "Name": "Aria's BookClub",
+        "Name": "Aria's Foundation",
         "Book": "Current Book: The Girl With The Dragon Tattoo",
-        "Members": "Members: 333 readers",
+        "Members": "Members: 453 readers",
         "Image": "https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 
     },
@@ -12,7 +12,7 @@
         "id": "2",
         "Name": "TBC Book Club",
         "Book": "Current Book: GameChanger",
-        "Members": "Members: 450 readers",
+        "Members": "Members: 210 readers",
         "Image": "https://images.pexels.com/photos/355805/pexels-photo-355805.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 
     },
@@ -23,6 +23,33 @@
         "Book": "Current Book: The Seven Husbands of Evelyn Hugo",
         "Members": "Members: 422 readers",
         "Image": "https://images.pexels.com/photos/2846814/pexels-photo-2846814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+
+    },
+
+    {
+        "id": "4",
+        "Name": "Fun-mites Reads",
+        "Book": "Current Book: The Alchemist",
+        "Members": "Members: 612 readers",
+        "Image": "https://images.pexels.com/photos/6898857/pexels-photo-6898857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+
+    },
+
+    {
+        "id": "5",
+        "Name": "The Isella Book Club",
+        "Book": "Current Book: A Time To Kill",
+        "Members": "Members: 470 readers",
+        "Image": "https://images.pexels.com/photos/1983035/pexels-photo-1983035.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+
+    },
+
+    {
+        "id": "6",
+        "Name": "Somo Readers",
+        "Book": "Current Book: The Shadow Work Journal",
+        "Members": "Members: 399 readers",
+        "Image": "https://images.pexels.com/photos/261970/pexels-photo-261970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 
     }
 ]

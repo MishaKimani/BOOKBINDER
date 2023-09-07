@@ -6,7 +6,7 @@ const MyClub=()=>{
      
     return(
         <main>
-            <NavBar/>
+            
             <BookClub/>
 
             

@@ -37,21 +37,23 @@ export default function MenuSimple() {
         <StyledMenuItem onClick={createHandleMenuClick('Profile')}>
           Profile
         </StyledMenuItem>
-        <StyledMenuItem onClick={createHandleMenuClick('MyClub')}>
-          MyClub
-        </StyledMenuItem>
-        <StyledMenuItem onClick={createHandleMenuClick('Reading Challenge')}>
+
+        {/* <StyledMenuItem onClick={createHandleMenuClick('Reading Challenge')}>
           Reading Challenge
         </StyledMenuItem>
+
         <StyledMenuItem onClick={createHandleMenuClick('BookBuddy')}>
           BookBuddy
-        </StyledMenuItem>
+        </StyledMenuItem> */}
+
         <StyledMenuItem onClick={createHandleMenuClick('Settings')}>
           Settings
         </StyledMenuItem>
+
         <StyledMenuItem onClick={createHandleMenuClick('Help')}>
           Help
         </StyledMenuItem>
+        
         <StyledMenuItem onClick={handleLogout}>
           LogOut
         </StyledMenuItem>
@@ -117,8 +119,6 @@ const StyledMenuItem = styled(MenuItem)(
   }
 
   &.${menuItemClasses.focusVisible} {
-    outline: 3px solid ${theme.palette.mode === 'dark' ? blue[600] : blue[200]};
-    background-color: ${theme.palette.mode === 'dark' ? grey[800] : grey[100]};
     color: ${theme.palette.mode === 'dark' ? grey[300] : grey[900]};
   }
 
@@ -143,18 +143,14 @@ const TriggerButton = styled(MenuButton)(
   padding: 8px 16px;
   line-height: 1.5;
   background: transparent;
-  border: 1px solid ${theme.palette.mode === 'dark' ? grey[800] : grey[200]};
+  border: none;
   cursor: pointer;
 
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 120ms;
 
-  &:hover {
-    background: ${theme.palette.mode === 'dark' ? grey[800] : grey[50]};
-    border-color: ${theme.palette.mode === 'dark' ? grey[600] : grey[300]};
-  }
-
+  
   &:focus-visible {
     border-color: ${blue[400]};
     outline: 3px solid ${theme.palette.mode === 'dark' ? blue[500] : blue[200]};

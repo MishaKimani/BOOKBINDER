@@ -1,35 +1,70 @@
 import styles from "./bookclub.module.css"
 import data from "./data.json"
+import Footer from '../Footer';
+import NavBar from '../NavBar';
+
+
+import { Link } from "react-router-dom";
+
+import { FaCircleLeft } from "react-icons/fa6";
 
 const bookclub=()=>{
 
     return(
 
-        <main className={styles.clubpage}>
-            <div className={styles.banner} > BookBinder Awards : Best BookClub this year wins!</div>
+        <>
+        <section className={styles.clubpage}>
 
-            <div className={styles.heading}>Trending Book Clubs of the Week</div>
+            <NavBar/>
+
+            {/* <div className={styles.banner}>
+                 View this month's club leaderboard
+                 
+            </div> */}
+
+            <div className={styles.club}>
 
             {data.map((clubs)=>{
 
                 return(
-                    <div className={styles.clubs} key={clubs.id}>
 
-                        <div><img src={clubs.Image} className={styles.bookimg}></img></div>
 
-                        <div className={styles.clubcont}>
+                        <div className={styles.clubs} key={clubs.id}>
 
-                            <h2>{clubs.Name}</h2>
-                            <h2>{clubs.Book}</h2>
-                            <h2>{clubs.Members}</h2>
-                            <button className={styles.buttjoin}>Join Club</button>
-                            
+                            <div><img src={clubs.Image} className={styles.bookimg}></img></div>
+
+                            <div className={styles.clubcont}>
+
+                                <div className={styles.names}>{clubs.Name}</div>
+                                <div>{clubs.Book}</div>
+                                <div>{clubs.Members}</div>
+                                <Link to="/Chat"><button className={styles.join}>Join Club</button></Link>
+                                
+                            </div>
                         </div>
-                    </div>
+
                     
                 )
             })}
-        </main>
+
+
+            </div>
+
+            <Link to="/">
+            <div className={styles.arrow}>
+
+            <FaCircleLeft/>
+
+            </div>
+            </Link>
+
+        </section>
+
+        <section>
+
+            <Footer/>
+        </section>
+    </>
     )
 }
 

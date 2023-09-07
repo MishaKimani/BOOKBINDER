@@ -1,4 +1,5 @@
 import NavBar from "../components/NavBar"
+import ShelfPg from "../components/Shelf"
 
 const MyShelf=()=>{
     
@@ -6,6 +7,7 @@ const MyShelf=()=>{
 
         <main>
             <NavBar/>
+            <ShelfPg/>
         </main>
     )
 }

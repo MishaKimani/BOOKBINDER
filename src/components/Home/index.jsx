@@ -1,103 +1,120 @@
 import styles from './home.module.css'
-import bourne from '../../assets/BourneBook.jpeg'
-import ransom from '../../assets/BloodRansom.jpeg'
-import Carousel from '../Swiper'
+import NavBar from '../NavBar';
+import Homeimg from "../../assets/pexels-home.jpg"
+import Homeimgs from "../../assets/Home.jpg"
+import atomic from "../../assets/Atomichabits.jpeg"
+import bourne from "../../assets/BourneBook.jpeg"
+import twisted from "../../assets/twistedgames.jpeg"
+import bookstack from "../../assets/bookstack.jpg"
+import divergent from "../../assets/Divergent.jpeg"
 
-import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import Footer from '../Footer';
+
+import { FaCircleRight } from "react-icons/fa6";
+
+import { Link } from 'react-router-dom';
 
 const Homes=()=>{
 
     return(
-        <main className={styles.landing}>
+        <>
 
-            <div className={styles.main}>
+            <section  className={styles.home}>
 
-                <div className={styles.picks}>This Week's Hot Scripts</div>
+                <NavBar/>
 
-                <div><Carousel/></div>
+                <div className={styles.rest}> 
 
-                <div className={styles.picks}>Hand-Picked for you...</div>
+                <div>
 
-                <div className={styles.updates}>
-
-                <div className={styles.trending}>
-                    <div className={styles.imgBox}>
-                        <img src={bourne} className={styles.bourne}/>
+                    <div className={styles.btxt}>
+                        Get lost in the labyrinth of letters
                     </div>
 
-                    <div className={styles.bookinfo}>
+                    <div className={styles.stxt}>
+                        Join a bookclub and network with readers of similar taste.
+                        BookBinder has your back!
+                    </div>
 
-                    <div><b>The Bourne Identity</b></div>
+                    <div className={styles.mtxt}>
 
-                    <div>by Robert Ludlum</div>
+                        <Link to="/Explore"><button>Find books</button></Link>
 
-                    <div>A man with an unknown past and an uncertain future,
-                         the target of assassins and at the heart of a deadly puzzle.
-                         He's fighting for survival and no one can help him -
-                          except the one woman who once wanted to escape him...
+                        <Link to="/MyClub"><button>Find club</button></Link>
+                    </div>
+
+                    <div className={styles.homeim}>
+
+                        <img className={styles.homeimg} src={Homeimgs} alt="img"></img>
+
+                        <img className={styles.homimg} src={Homeimg} alt="img"></img>
+
+                        <img className={styles.homeimg} src={bookstack} alt="img"></img>
 
                     </div>
 
-                    <button>Add To Shelf</button>
-
-                    </div>
+                
+                </div>
 
                 </div>
 
-                <div className={styles.trending}>
-                    <div className={styles.imgBox}>
-                        <img src={ransom} className={styles.ransom}/>
-                    </div>
+            </section>
 
-                    <div className={styles.bookinfo}>
+            <section className={styles.home2}>
 
-                    <div><b>Blood Ransom</b></div>
+                <div classname={styles.homecont}>
 
-                    <div>by Sophie Mackenzie</div>
-
-                    <div>When Rachel discovers that evil scientist Elijah is still working in secret 
-                         for a section of the government and about to murder Daniel,
-                         she sets out to rescue the little boy, but her plans backfire with disastrous consequences.
-                         Across the Atlantic...
-
-                    </div>
-
-                    <button>Add To Shelf</button>
-
-                    </div>
+                <div className={styles.btxt2}>
+                    Explore countless books
                 </div>
+
+                <div>
+                    Scroll through hundreds of books of choice and add any to shelf.
+                    You can also choose to purchase the book and have it delivered to your front door!
+                </div>
+
+                </div>
+                
+                <div className={styles.homebox}>
+
+                    <div className={styles.homebox1}>
+
+                        <img className={styles.homeimg1} src={atomic} alt="img"></img>
+
+                        <img className={styles.homeimg2} src={bourne} alt="img"></img>
+
+                        <img className={styles.homeimg3} src={twisted} alt="img"></img>
+
+                        <img className={styles.homeimg3} src={divergent} alt="img"></img>
+
+                        <img className={styles.homeimg2} src="https://bmblyjkgzliveuyxaurt.supabase.co/storage/v1/object/public/photos/booklovers.jpeg" alt="img"></img>
+
+                        <img className={styles.homeimg1} src="https://bmblyjkgzliveuyxaurt.supabase.co/storage/v1/object/public/photos/Hungergames.jpeg" alt="img"></img>
+
+                    </div>
+
+                    <Link to="/Explore">
+                    <div className={styles.arrowr}>
+
+                        <FaCircleRight/>
+
+                    </div>
+                    </Link>
 
                 </div>
 
             
-    
-            </div>
 
-            <div className={styles.side}>
+            </section>
 
-                <div><b>YOUR CURRENT READS</b></div>
+            <section>
 
-                <div className={styles.shelf}>
-                    <AutoStoriesIcon className={styles.bookicon}/>
-                    <input type="search" placeholder="Search MyShelf"></input>
+                <Footer/>
+            </section>
 
-                </div>
 
-                <div className={styles.bookcount}>
-                    Bookcount:
-                </div>
 
-                <div>
-                    Explore book buddies with similar genre preferences...
-
-                    <div classname={styles.buddy}>
-
-                    </div>
-                </div>
-                
-    
-            </div>
-        </main>
+        </>
     )
 }
 

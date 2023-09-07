@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { useContext } from "react"
 import { AuthContext } from "../../context/authContext"
 
-import styles from "../Landing/landing.module.css"
+import styles from "../Login/landing.module.css"
 
 
 const Log = () =>{

@@ -1,0 +1,51 @@
+.footer{
+
+    height: 300px;
+    background-color: rgb(144, 159, 240);
+
+    border-radius: 50px;
+
+    padding: 50px;
+
+
+    >*{
+
+        display: flex;
+        gap: 200px;
+        margin-bottom: 30px;
+
+        >*{
+
+            >*{
+                margin-top: 10px;
+            }
+            
+        }
+        
+    }
+}
+
+.footerchild{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.logos{
+
+    display: flex;
+    
+    >*{
+
+        margin-right: 20px;
+        >*{
+            width: 30px;
+            height: 30px;
+
+            border-radius: 5px;
+        }
+        
+
+        
+    }
+}

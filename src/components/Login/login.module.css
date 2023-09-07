@@ -1,0 +1,108 @@
+.main{
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+
+      
+}
+
+.login{
+
+    width: 65%;
+    height: 600px;
+    background-color: rgb(102,99,236);
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginchild{
+
+    width: 85%;
+    height: 80%;
+
+    background-color: white;
+
+    display: flex;
+
+    border-radius: 15px;
+    gap: 20px;
+
+
+    .login1{
+
+        width: 50%;
+       
+       .bk{
+
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        } 
+    }
+
+
+    .login2{
+
+        width: 50%;
+        >*{
+
+            margin-top: 15px;
+        }
+
+        .logo{
+
+            width: 120px;
+            height: 70px;
+        }
+
+        .slog{
+
+            color: rgb(117,115,249);
+        }
+
+        .txt{
+            
+            font-size: small;
+        }
+    }
+    
+}
+
+.emails{
+
+    margin-top: 20px;
+    width: 250px;
+    height: 30px;
+
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.sign{
+
+    width: 250px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 25px;
+    
+    border-radius: 5px;
+    border: 1px solid grey;
+
+    background-color: rgb(108,105,248);
+}
+
+input:hover,
+input:focus,
+input:active{
+    border: 1px solid rgb(108,105,248);
+}
+

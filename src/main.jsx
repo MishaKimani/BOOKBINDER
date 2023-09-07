@@ -5,7 +5,7 @@ import Chat from "./pages/Chat"
 import Explore from "./pages/Explore"
 import MyClub from "./pages/MyClub"
 import MyShelf from "./pages/MyShelf"
-import LandingPage from "./pages/Landing"
+import LoginPage from "./pages/Login"
 
 import './index.css'
 import {
@@ -14,6 +14,7 @@ import {
 } from "react-router-dom"
 
 import { AuthProvider } from './context/authContext'
+import ShelfContextProvider from './components/context/shelfcontext'
 
 const paths = createBrowserRouter([
   {
@@ -42,8 +43,8 @@ const paths = createBrowserRouter([
   },
 
   {
-    path: '/Landing',
-    element: <LandingPage/>
+    path: '/Login',
+    element: <LoginPage/>
   }
 
 ])
@@ -52,8 +53,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
     <AuthProvider>
+      
+      <ShelfContextProvider>
 
     <RouterProvider router={paths}/>
+
+    </ShelfContextProvider>
 
     </AuthProvider>
     

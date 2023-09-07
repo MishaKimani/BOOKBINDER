@@ -1,9 +1,20 @@
 import { useState } from "react"
 import { supabase } from "../utils/SupaBaseConfig"
 
-import { Link } from "react-router-dom"
 
-import styles from "../components/Landing/landing.module.css"
+import styles from "../components/Login/login.module.css"
+
+import Spinner from 'react-bootstrap/Spinner';
+
+        function BasicExample() {
+        return (
+            <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+            </Spinner>
+        );
+        }
+
+        
 
 const Auth=()=>{
 
@@ -44,7 +55,14 @@ const Auth=()=>{
             />
             
             {
-                loading ? <span>Loading</span> : <button className={styles.sign}>Sign In</button>
+                loading ? 
+
+                // <span className={styles.loader}>Loading</span>
+                
+                    BasicExample()
+                 :
+
+                  <button className={styles.sign}>Sign In</button>
             }
         </form>
     )

@@ -1,14 +1,7 @@
 import { Link } from "react-router-dom";
 
 import styles from './navbar.module.css'
-import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
-import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
-import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
-import SearchIcon from '@mui/icons-material/Search';
-
-import logo from '../../assets/BOOKBINd.png'
-import MenuSimple from "./dropdown";
-
+import  MenuSimple  from "./dropdown.jsx"
 
 const NavBar=()=>{
 
@@ -18,50 +11,25 @@ const NavBar=()=>{
         <div>
         
             <div className={styles.logo}>
-            <img src={logo} className={styles.image}></img>
+            <img src="https://bmblyjkgzliveuyxaurt.supabase.co/storage/v1/object/public/photos/BOOKBINd.png" className={styles.image}></img>
             </div>
 
-        
-            <div>
-            <Link to="/">Home</Link>
-            </div>
+            <div className={styles.group}>
 
-            <div>
-                <Link to="/MyShelf">MyShelf</Link>
-            </div>
+                <Link to="/"><div>Home</div></Link>
 
-            <div>
-            <Link to="/Explore">Explore</Link>
-            </div>
-
-            <div>
-            <Link to="/MyClub">MyClub</Link>
-            </div>
-
-            <div className={styles.search}>
-                <input type='search' placeholder='Search by author or title' className={styles.input}>
-                    
-                </input>
-
-                <SearchIcon/>
-            </div>
-
-            <div className={styles.icons}>
-            <NotificationsActiveIcon/>
-
-            <Link to="/Chat"><QuestionAnswerIcon/></Link>
-
-            <EmojiPeopleIcon/>
-
-            <div className={styles.acc}>
+                <Link to="/MyShelf"><div>MyShelf</div></Link>
                 
-                <MenuSimple/>
+                <Link to="/Explore"><div>Explore</div></Link>
 
-                
+                <Link to="/MyClub"><div>MyClub</div></Link>
+
             </div>
 
-        
-            </div>
+            <MenuSimple/>
+
+
+
         </div>
         </nav>
     )

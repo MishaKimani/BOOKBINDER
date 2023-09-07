@@ -1,13 +1,12 @@
-import NavBar from "../components/NavBar"
-import ChatPage from "../components/ChatPage"
+import Aria from "../components/clubchat/Aria'sFoundation"
 
 const Chat=()=>{
 
     return(
 
         <main>
-            <NavBar/>
-            <ChatPage/>
+                <Aria/>
+            
         </main>
     )
     

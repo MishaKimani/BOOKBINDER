@@ -1,16 +1,16 @@
-import Landing from "../components/Landing"
+import Login from "../components/Login"
 import {AuthContext} from "../context/authContext"
 import { useContext } from "react"
 import { Link } from "react-router-dom"
 
-const LandingPage=()=>{
+const LoginPage=()=>{
 const {session , handleLogout}=useContext(AuthContext)
     return(
 
         <>
         
             {
-                !session? <Landing/> : <div><Link to="/Home">Home</Link> 
+                !session? <Login/> : <div><Link to="/Home">Home</Link> 
                  <button onClick={handleLogout}>Logout</button></div>
             }
             
@@ -20,4 +20,4 @@ const {session , handleLogout}=useContext(AuthContext)
     )
 }
 
-export default LandingPage
+export default LoginPage

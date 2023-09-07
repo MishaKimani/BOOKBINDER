@@ -1,60 +1,93 @@
 import styles from "./explorepg.module.css"
-import { useState, useEffect } from "react"
+import { useState } from "react"
+import data from "./data.json"
+
+import { Link } from "react-router-dom"
+
+import { useShelfContext } from "../context/shelfcontext"
+           
 
 const ExplorePg=()=>{
 
     const [search, setSearch]=useState("")
-    const [books, setBooks]=useState([])
+    
 
-            const url = 'https://book-finder1.p.rapidapi.com/api/search';
-        const options = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': 'de2ad08ef1msh01ca43cac2e1726p13cae3jsnb8a559f0cea8',
-                'X-RapidAPI-Host': 'book-finder1.p.rapidapi.com'
-            }
-        };
+    const { shelf, addToShelf, removeFromShelf }= useShelfContext()
 
-        const fetchData=async()=>{
+    console.log('MyShelf has:',shelf)
 
-        try {
-            const response = await fetch(url, options);
-            const result = await response.json  ();
-            console.log(result);
-            setBooks(result.results)
 
-        } catch (error) {
-            console.error(error);
-        }
+
+    const shelfChecker= (id) => {
+
+        const boolean= shelf.some((book) => book.id === id)
+
+        return boolean;
     }
 
-    const handleForm=((e)=>{
+        //     const url = 'https://book-finder1.p.rapidapi.com/api/search';
+        //     const options = {
+        //     method: 'GET',
+        //     headers: {
+        //         'X-RapidAPI-Key': 'de2ad08ef1msh01ca43cac2e1726p13cae3jsnb8a559f0cea8',
+        //         'X-RapidAPI-Host': 'book-finder1.p.rapidapi.com'
+        //     }
+        // };
 
-        e.preventDefault()
-        fetchData()
-    })
-               
+    //     const fetchData=async()=>{
 
-    useEffect(()=>{
-        fetchData()
-    }, [])
+    //     try {
+    //         const response = await fetch(url, options);
+    //         const result = await response.json  ();
+    //         console.log(result);
+    //         setBooks(result.results)
 
+    //     } catch (error) {
+    //         console.error(error);
+    //     }
+    // }
+
+    // const handleForm=((e)=>{
+
+    //     e.preventDefault()
+    //     fetchData()
+        
+    // })
+
+    
+
+    // useEffect(()=>{
+    //     fetchData()
+    // },[])
+
+    
     return(
 
         <main className={styles.explore}>
 
-            <form onSubmit={handleForm}>
+        <div className={styles.exploretop}>
 
-                <input type="text"  placeholder="Find Books"/>
-                <input value="submit" type="submit"/>
-            </form>
+                <form className={styles.exploreform}>
+
+                    <input type="text"  placeholder="Find Books" 
+                    value={search}
+                    onChange={(e)=> setSearch(e.target.value)}
+                    
+                    />
+
+                    <input value="Search" type="submit"/>
+                </form>
+
+        </div>
+            
+
+        <div className={styles.explorebk}>
            
            {
-           !books || search === "" ? <h2>Search books</h2> :
-
-           books.filter((books)=>
+           
+           data.filter((books)=>
            {
-            if(!value || books.title.toLowerCase().includes(search.toLowerCase())) {
+            if(!books || books.title.toLowerCase().includes(search.toLowerCase())) {
                 return books
             }
 
@@ -63,17 +96,60 @@ const ExplorePg=()=>{
            .map((book)=>{
 
                 return(
-                    <div key={book.work_id}>
+                    <div className={styles.bookbox} key={book.id}>
 
-                        <h2>{book.title}</h2>
+                        <div className={styles.box1}>
+                            <img className={styles.cover} src={book.image}></img>
+                        </div>
+                        
+                        <div className={styles.box2}>
+                            <div>{book.title}</div>
+
+                            {/* <div><b>Author:</b>{book.author}</div> */}
+                            
+                            <div className={styles.btn}>
+
+                                {
+                                    shelfChecker(book.id) ?
+
+                                    (
+                                        <button onClick={()=>removeFromShelf(book.id)}>
+                                            Remove From Shelf
+                                        </button>
+                                    ) :
+
+                                    (
+                                        <button onClick={()=>addToShelf(book)}>
+                                            Add To Shelf
+                                        </button>
+                                    )
+                                }
+
+
+                                
+
+                            </div>
+
+                            <div>
+                                <Link to="https://www.amazon.com/b?node=283155">
+                                    <button className={styles.get}>Get Book</button>
+                                </Link>
+                            </div>
+
+                        </div>
 
                     </div>
                 )
            })}
             
-        
+        </div>
+           
         </main>
     )
-}
+        
+    }
+
+    
+
 
 export default ExplorePg

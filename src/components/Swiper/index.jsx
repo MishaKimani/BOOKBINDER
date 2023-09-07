@@ -19,6 +19,8 @@ import GradeIcon from '@mui/icons-material/Grade';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import StarHalfIcon from '@mui/icons-material/StarHalf';
 
+import { Link } from 'react-router-dom';
+
 const Carousel=() => {
   return (
     <Swiper
@@ -52,7 +54,7 @@ const Carousel=() => {
 
                 <button className={styles.add}>Add To Shelf</button>
 
-                <button className={styles.get}>Get Book</button>
+                <Link to="https://www.amazon.com/b?node=283155"><button className={styles.get}>Get Book</button></Link>
 
                 <div className={styles.rating}>
                     Rating
@@ -87,7 +89,7 @@ const Carousel=() => {
 
                 <button className={styles.add}>Add To Shelf</button>
 
-                <button className={styles.get}>Get Book</button>
+                <Link to="https://www.amazon.com/b?node=283155"><button className={styles.get}>Get Book</button></Link>
 
                 <div className={styles.rating}>
                     Rating
@@ -122,7 +124,7 @@ const Carousel=() => {
 
                 <button className={styles.add}>Add To Shelf</button>
 
-                <button className={styles.get}>Get Book</button>
+                <Link to="https://www.amazon.com/b?node=283155"><button className={styles.get}>Get Book</button></Link>
 
                 <div className={styles.rating}>
                     Rating
@@ -160,7 +162,7 @@ const Carousel=() => {
 
                 <button className={styles.add}>Add To Shelf</button>
 
-                <button className={styles.get}>Get Book</button>
+                <Link to="https://www.amazon.com/b?node=283155"><button className={styles.get}>Get Book</button></Link>
 
                 <div className={styles.rating}>
                     Rating
