@@ -1,24 +1,13 @@
 import { Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from '../clubchat.module.css'
-
+import Chat from './Chat';
 import { supabase } from "../../../utils/SupaBaseConfig"
 
 // import "bootswatch/dist/morph/bootstrap.min.css"
 
 
-const Aria=(()=>{
-
-    async function init() {
-
-        const { data: Aria, error } = await supabase
-        .from('Aria')
-        .select('*');
-
-        console.log(Aria);
-    }
-
-    init()
+const Aria=()=>{
         
 
 
@@ -30,8 +19,8 @@ const Aria=(()=>{
 
                 Aria's Foundation
             </div>
-
-            <Card style={{ width: '40rem' }}>
+            <Chat/>
+            {/* <Card style={{ width: '40rem' }}>
 
                 <Card.Body className={styles.cardbody}>
 
@@ -56,9 +45,9 @@ const Aria=(()=>{
                     4.20pm
                 </div>
 
-            </Card>
+            </Card> */}
         </main>
     )
-})
+}
 
 export default Aria

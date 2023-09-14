@@ -5,11 +5,11 @@ const Chat=()=>{
     return(
 
         <main>
+            
                 <Aria/>
             
         </main>
     )
-    
 }
 
 export default Chat

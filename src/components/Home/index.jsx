@@ -62,7 +62,7 @@ const Homes=()=>{
 
             <section className={styles.home2}>
 
-                <div classname={styles.homecont}>
+                <div className={styles.homecont}>
 
                 <div className={styles.btxt2}>
                     Explore countless books
