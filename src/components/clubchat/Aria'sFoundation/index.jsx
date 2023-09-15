@@ -7,7 +7,22 @@ import { supabase } from "../../../utils/SupaBaseConfig"
 // import "bootswatch/dist/morph/bootstrap.min.css"
 
 
+
 const Aria=()=>{
+
+const Aria=(()=>{
+
+    async function init() {
+
+        const { data: messages, error } = await supabase
+        .from('messages')
+        .select('*');
+
+        console.log(messages);
+    }
+
+    init()
+
         
 
 

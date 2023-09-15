@@ -6,6 +6,7 @@ import Explore from "./pages/Explore"
 import MyClub from "./pages/MyClub"
 import MyShelf from "./pages/MyShelf"
 import LoginPage from "./pages/Login"
+import Profile from "./components/profile"
 
 import './index.css'
 import {
@@ -45,6 +46,11 @@ const paths = createBrowserRouter([
   {
     path: '/Login',
     element: <LoginPage/>
+  },
+
+  {
+    path: '/Profile',
+    element: <Profile/>
   }
 
 ])
