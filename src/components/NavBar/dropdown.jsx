@@ -19,7 +19,7 @@ export default function MenuSimple() {
     };
   };
 
-  const {session , handleLogout}=useContext(AuthContext)
+  const {session , handleLogout, username}=useContext(AuthContext)
 
 
   return (
@@ -35,9 +35,13 @@ export default function MenuSimple() {
       <Menu slots={{ listbox: StyledListbox }}>
 
         <StyledMenuItem onClick={createHandleMenuClick('Profile')}>
+
+         {username ? username : "Log In"}
+
           <Link to="/Profile">
           Profile
           </Link>
+
         </StyledMenuItem>
 
         {/* <StyledMenuItem onClick={createHandleMenuClick('Reading Challenge')}>
